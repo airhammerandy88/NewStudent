@@ -1,6 +1,6 @@
 #include "roster.h"
 
-Student* classRosterArray[5];
+Student* classRosterArray[5]; 
 int nextIndex = 0;
 
 
@@ -12,7 +12,7 @@ Roster::Roster()
 
 Roster::~Roster()
 {
-	delete[] classRosterArray[5];
+	delete classRosterArray[5];
 }
 
 void Roster::parse(string studentData) //pulls from main studentdata array

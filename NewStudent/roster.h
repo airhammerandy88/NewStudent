@@ -4,8 +4,8 @@
 
 class Roster {
 private:
-	String classRosterArray[5]; //hold data in "studentData table"
-	//int Student::GetStudentId;
+	Student* classRosterArray[5]; //hold data in "studentData table"
+	int Student::GetStudentId; // not sure if relevent
 	static int nextIndex;
 
 public:
