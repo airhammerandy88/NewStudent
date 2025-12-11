@@ -12,7 +12,7 @@ Roster::Roster()
 
 Roster::~Roster()
 {
-	delete Roster;
+	delete new Roster;
 }
 
 void Roster::parse(string studentData) //pulls from main studentdata array
