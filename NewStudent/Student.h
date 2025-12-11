@@ -13,12 +13,15 @@ private:
 	string emailAddress;
 	int age;
 	int numDaysToCompleteCourse[5];
+	DegreeProgram degreeProgram;
+
+	
 
 
 public:
-
+	
 	Student();
-	Student(string studentId, string firstName, string lastName, string emailAddress, int age, DegreeProgram degreeProgram); //add degree
+	Student(string studentId, string firstName, string lastName, string emailAddress, int age, DegreeProgram degreeProgram); 
 
 	string GetStudentId() const;
 	string GetFirstName() const;
@@ -33,11 +36,11 @@ public:
 	void SetLastName(string lastName);
 	void SetEmailAddres(string emailAddress);
 	void SetAge(int age);
-	//void SetNumDaysToCompleteCourse[5];
+	//void SetDegreeProgram(enum SECURITY, enum NETWORK, enum SOFTWARE );
+	//void SetNumDaysToCompleteCourse[5](int numDays);
 
 
-	void PrintStudentData(string firstName, string lastName, string emailAddress, DegreeProgram degreeProgram);//degree
-
+	void PrintStudentData(string studentId, string firstName, string lastName, string emailAddress, int age, int numDaysInCourse, DegreeProgram degreeProgram) const;
 
 
 

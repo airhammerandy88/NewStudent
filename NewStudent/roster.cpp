@@ -19,15 +19,19 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 {
 
 	size_t rhs = studentData.find(",");
-	string firstName = studentData.substr(0, rhs);
+	string studentId = studentData.substr(0, rhs);
 
 	size_t lhs = rhs + 1;
+	rhs = studentData.find(",", lhs);
+	string firstName = studentData.substr(lhs, rhs - lhs);
+
+	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
 	string lastName = studentData.substr(lhs, rhs - lhs);
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
-	string emailAddress = studentData.substr(lhs, rhs - lhs);
+	string emailAddress = (studentData.substr(lhs, rhs - lhs));
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
@@ -43,24 +47,24 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
-	int numDays3 = stoi(studentData.substr(lhs, rhs - lhs));
+	int numDays3 = stoi(studentData.substr(lhs, rhs - lhs)); 
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
-	enum degree = (studentData.substr(lhs, rhs - lhs)); //need to find solution for degree 
+	DegreeProgram degreeProgram = (studentData.substr(lhs, rhs - lhs));
 
 
 
 
 
 
-	add(firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3);
+	add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degreeProgram);
 }
 
-void Roster::add(string studentId, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
+void Roster::add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
 {
 	int* daysInCourse = new int[3] {daysInCourse1, daysIncourse2, daysInCourse3};
-	classRosterArray.push_back(new Student(studentId, firstname, lastName, emailAddress, age, daysInCourse, degreeProgram);
+	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
 }
 
 void Roster::remove(string studentId)

@@ -67,7 +67,7 @@ void Student::SetAge(int aGe)
     age = aGe;
 }
 
-void Student::PrintStudentData(string firstName, string lastName, string emailAddress, DegreeProgram degreeProgram) //degree
+void Student::PrintStudentData(string studentId, string firstName, string lastName, string emailAddress, int age, int numDaysInCourse, DegreeProgram degreeProgram) const //degree
 {
     cout << "A1   " << "First Name:   " << firstName << "    " << endl;  //strange tab spacing
     cout << "Last name:   " << lastName << "   " << endl;

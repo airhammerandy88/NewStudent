@@ -12,6 +12,10 @@ int main() {
 
 	Roster roster; //need to change to something relevent
 
+	cout << "C867: Scripting and Programming, C++" << endl;
+	cout << "Andrew Jones" << endl;
+	cout << "Student ID: 012527555" << endl;
+
 	for (int i = 0; i < 5; ++i) {
 		roster.parse(studentData[i]);
 
@@ -31,6 +35,6 @@ int main() {
 	roster.remove("A3");
 	// expected the above line should print a message saying such a student with this id isnt found
 
-	delete roster; 
+	//delete roster; 
 
 }
