@@ -16,7 +16,7 @@ Roster::~Roster()
 {
 	// for loop classRosterArray nullptr each i
 	for (int i = 0; i < 5; ++i) {// need to figure out
-	//	classRosterArray[i] = nullptr;
+	 classRosterArray[i] = nullptr;
 	}
 }
 
