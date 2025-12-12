@@ -11,7 +11,7 @@ private:
 	string firstName;
 	string lastName;
 	string emailAddress;
-	int age;
+	int age = 0;
 	int numDaysToCompleteCourse[5];
 	DegreeProgram degreeProgram;
 
@@ -21,7 +21,7 @@ private:
 public:
 	
 	Student();
-	Student(string studentId, string firstName, string lastName, string emailAddress, int age, DegreeProgram degreeProgram); 
+	Student(string studentId, string firstName, string lastName, string emailAddress, int age, int dayInCourse1[], DegreeProgram degreeProgram);
 
 	string GetStudentId() const;
 	string GetFirstName() const;
@@ -29,7 +29,7 @@ public:
 	string GetEmailAddress() const;
 	int GetAge() const;
 	int GetNumDaysToCompleteCourse[5]; //need research
-	enum GetDegreeProgram { SECURITY, NETWORK, SOFTWARE }; // need research
+	DegreeProgram GetDegreeProgram() ; 
 
 	void SetStudentID(string studentId);
 	void SetFirstName(string firstName);
@@ -38,9 +38,10 @@ public:
 	void SetAge(int age);
 	//void SetDegreeProgram(enum SECURITY, enum NETWORK, enum SOFTWARE );
 	//void SetNumDaysToCompleteCourse[5](int numDays);
+	
 
 
-	void PrintStudentData(string studentId, string firstName, string lastName, string emailAddress, int age, int numDaysInCourse, DegreeProgram degreeProgram) const;
+	void Print() const;
 
 
 

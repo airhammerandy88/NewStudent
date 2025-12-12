@@ -27,7 +27,7 @@ int main() {
 	roster.printInvaildEmails();
 
 	//loop through rosterarray and for each elememt
-	roster.printAverageDaysInCourse();//need to build
+	roster.printAverageDaysInCourse("A3");//need to build, loop
 
 	roster.printBydegreeProgram(SOFTWARE);
 	roster.remove("A3");
@@ -35,6 +35,6 @@ int main() {
 	roster.remove("A3");
 	// expected the above line should print a message saying such a student with this id isnt found
 
-	delete roster; //set error
+	
 
 }

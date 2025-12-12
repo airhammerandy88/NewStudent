@@ -4,18 +4,19 @@
 
 class Roster {
 private:
-	Student* classRosterArray[5]; //hold data in "studentData table"
-	int Student::GetStudentId; // not sure if relevent
-	static int nextIndex;
+	
+	Student classRosterArray[5];
+	static int nextIndex;// use in printall
+	
 
 public:
+	
+	
 
 	Roster();
 	~Roster();
 
 	void parse(string);
-
-	//void add(string studentId, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3);
 
 	void add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3, DegreeProgram degreeProgram);
 

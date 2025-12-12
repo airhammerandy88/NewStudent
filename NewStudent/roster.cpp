@@ -1,18 +1,23 @@
 #include "roster.h"
+#include "Student.h"
+#include "degree.h"
 
-Student* classRosterArray[5]; 
+ 
 int nextIndex = 0;
 
 
 
 Roster::Roster()
 {
-	classRosterArray[5] = new Student[5];
+	
 }
 
 Roster::~Roster()
 {
-	delete classRosterArray[5];
+	// for loop classRosterArray nullptr each i
+	for (int i = 0; i < 5; ++i) {// need to figure out
+	//	classRosterArray[i] = nullptr;
+	}
 }
 
 void Roster::parse(string studentData) //pulls from main studentdata array
@@ -51,12 +56,18 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
-	DegreeProgram degreeProgram = (studentData.substr(lhs, rhs - lhs));
-
-
-
-
-
+	DegreeProgram degreeProgram = DegreeProgram::NETWORK;
+		string d = (studentData.substr(lhs, rhs - lhs));
+		if (d == "NETWORK") {
+			degreeProgram = DegreeProgram::NETWORK;
+		}
+		else if (d == "SOFTWARE") {
+			degreeProgram = DegreeProgram::SOFTWARE;
+		}
+		else if (d == "SECURITY") {
+			degreeProgram = DegreeProgram::SECURITY;
+		}
+	 
 
 	add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degreeProgram);
 }
@@ -64,7 +75,7 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 void Roster::add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
 {
 	int* daysInCourse = new int[3] {daysInCourse1, daysIncourse2, daysInCourse3};
-	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
+	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram));
 }
 
 void Roster::remove(string studentId)
@@ -74,8 +85,8 @@ void Roster::remove(string studentId)
 
 void Roster::printAll()
 {
-	for (int i = 0; i < 5 ++i) {
-		classRosterArray[i].print();//change to relivent data
+	for (int i = 0; i < 5; ++i) {
+		classRosterArray[i].Print();//change to relevent data
 	}
 }
 
