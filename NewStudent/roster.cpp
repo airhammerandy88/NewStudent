@@ -3,8 +3,8 @@
 #include "degree.h"
 
  
-int nextIndex = 0;
 
+Student s;
 
 
 Roster::Roster()
@@ -15,9 +15,7 @@ Roster::Roster()
 Roster::~Roster()
 {
 	// for loop classRosterArray nullptr each i
-	for (int i = 0; i < 5; ++i) {// need to figure out
-	//	classRosterArray[i] = nullptr;
-	}
+	
 }
 
 void Roster::parse(string studentData) //pulls from main studentdata array
@@ -70,12 +68,15 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 	 
 
 	add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degreeProgram);
+	counter = counter + 1;
+
 }
 
 void Roster::add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysIncourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
 {
-	int* daysInCourse = new int[3] {daysInCourse1, daysIncourse2, daysInCourse3};
+	int* daysInCourse = new int[5] {daysInCourse1, daysIncourse2, daysInCourse3};
 	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram));
+	
 }
 
 void Roster::remove(string studentId)
@@ -85,8 +86,9 @@ void Roster::remove(string studentId)
 
 void Roster::printAll()
 {
-	for (int i = 0; i < 5; ++i) {
-		classRosterArray[i].Print();//change to relevent data
+	for (int i = 0; i < counter; ++i) {
+		  
+		s.Print();//change to relevent data
 	}
 }
 

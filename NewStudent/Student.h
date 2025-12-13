@@ -36,7 +36,7 @@ public:
 	void SetLastName(string lastName);
 	void SetEmailAddres(string emailAddress);
 	void SetAge(int age);
-	//void SetDegreeProgram(enum SECURITY, enum NETWORK, enum SOFTWARE );
+	
 	//void SetNumDaysToCompleteCourse[5](int numDays);
 	
 

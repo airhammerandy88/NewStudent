@@ -1,13 +1,14 @@
 #pragma once
 #include "Student.h"
 #include <string>
+#include <vector>
 
 class Roster {
 private:
 	
-	Student classRosterArray[5];
-	static int nextIndex;// use in printall
-	
+	vector<Student*> classRosterArray;
+	int counter = 0;
+	int i = 0;
 
 public:
 	
