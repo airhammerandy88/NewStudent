@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 #include "degree.h"
+
 
 using namespace std;
 
@@ -21,7 +23,7 @@ private:
 public:
 	
 	Student();
-	Student(string studentId, string firstName, string lastName, string emailAddress, int age, int dayInCourse1[], DegreeProgram degreeProgram);
+	Student(string studentId, string firstName, string lastName, string emailAddress, int age, int dayInCourse, DegreeProgram degreeProgram);
 
 	string GetStudentId() const;
 	string GetFirstName() const;

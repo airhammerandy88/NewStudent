@@ -12,13 +12,21 @@ Student::Student()
 {
 }
 
-Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram)// need completed
+Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse, DegreeProgram degreeProgram)// need completed
 {
+    //studentId = sId;
+    //firstName = fName;
+    //lastName = lName;
+    //emailAddress = eAddress;
+    //age = s_age;
+    //numDaysToCompleteCourse = daysInCourse;
+
+
 }
 
 string Student::GetStudentId() const
 {
-    return string();
+    return studentId;
 }
 
 string Student::GetFirstName() const
@@ -74,7 +82,7 @@ void Student::SetAge(int aGe)
 
 void Student::Print() const 
 {
-    cout << "A1   " << "First Name:   " << firstName << "    " << endl;  //strange tab spacing
+    cout << studentId << "   " << "First Name:   " << firstName << "    " << endl;  //strange tab spacing
     cout << "Last name:   " << lastName << "   " << endl;
     cout << "Email:   " << emailAddress << "   " << endl;
     cout << "Age:   " << age << "    " << endl;

@@ -7,6 +7,7 @@ class Roster {
 private:
 	
 	vector<Student*> classRosterArray;
+	//vector<int*> daysInCourse;
 	int counter = 0;
 	int i = 0;
 

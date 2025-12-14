@@ -11,6 +11,7 @@ int main() {
 									"A5,Andy,Jones,ajone355@wgu.edu,37,30, 35, 40, SOFTWARE" };
 
 	Roster roster; //need to change to something relevent
+	Student Nstudent;
 
 	cout << "C867: Scripting and Programming, C++" << endl;
 	cout << "Andrew Jones" << endl;
@@ -35,6 +36,7 @@ int main() {
 	roster.remove("A3");
 	// expected the above line should print a message saying such a student with this id isnt found
 
+	
 	
 
 }
