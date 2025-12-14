@@ -74,10 +74,11 @@ void Student::SetAge(int aGe)
 
 void Student::Print() const 
 {
-    cout << "A1   " << "First Name:   " << firstName << "    " << endl;  //strange tab spacing
-    cout << "Last name:   " << lastName << "   " << endl;
-    cout << "Email:   " << emailAddress << "   " << endl;
-    cout << "Age:   " << age << "    " << endl;
-    cout << "daysInCourse:   " << GetNumDaysToCompleteCourse << "   " << endl;
-    cout << "Degree Program:    " << degreeProgram << "   " << endl;
+    cout << "Student Id:   " << studentId << "   ";
+    cout << "First Name:   " << firstName << "    "; 
+    cout << "Last name:   " << lastName << "   ";
+    cout << "Email:   " << emailAddress << "   ";
+    cout << "Age:   " << age << "    ";
+    cout << "daysInCourse:   " << GetNumDaysToCompleteCourse << "   ";
+    cout << "Degree Program:    " << degreeProgram << endl;
 }

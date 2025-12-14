@@ -86,9 +86,9 @@ void Roster::remove(string studentId)
 
 void Roster::printAll()
 {
-	for (int i = 0; i < counter; ++i) {
-		  
-		s.Print();//change to relevent data
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		classRosterArray.at(i)->Print();
+		//change to relevent data
 	}
 }
 
