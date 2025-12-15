@@ -59,37 +59,24 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 		if (d == "NETWORK") {
 			degreeProgram = DegreeProgram::NETWORK;
 		}
-		if (d == "SOFTWARE") {
+		else if (d == "SOFTWARE") {
 			degreeProgram = DegreeProgram::SOFTWARE;
 		}
-		if (d == "SECURITY") {
+		else if (d == "SECURITY") {
 			degreeProgram = DegreeProgram::SECURITY;
 		}
 	 
 
 	add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degreeProgram);
 	counter = counter + 1;
-	//cout << studentId << endl;
-	//cout << firstName << endl;
-	//cout << lastName << endl;
-	//cout << emailAddress << endl;
-	//cout << age << endl;
-	//cout << numDays1 << endl;
-	//cout << numDays2 << endl;
-	//cout << numDays3 << endl;
-	//cout << degreeProgram << endl;
+
 }
 
 void Roster::add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
 {
-	int* daysInCourse = new int[5] = { daysInCourse1, daysInCourse2, daysInCourse3 }; 
-	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse[5], degreeProgram));
-	cout << studentId << " " << firstName <<  " " << lastName << endl;
-	cout << emailAddress << " " << age << endl;
-	cout << daysInCourse[0] << " " << daysInCourse[1] << " " << daysInCourse[2] << endl;
-	int testavg = (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3;
-
-	cout << testavg << " " << degreeProgram << endl;
+	int* daysInCourse = new int[5] {daysInCourse1, daysIncourse2, daysInCourse3};
+	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram));
+	
 }
 
 void Roster::remove(string studentId)
@@ -99,8 +86,9 @@ void Roster::remove(string studentId)
 
 void Roster::printAll()
 {
-	for (i = 0; i < counter; ++i) {
-			s.Print();//change to relevent data
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		classRosterArray.at(i)->Print();
+		//change to relevent data
 	}
 }
 
