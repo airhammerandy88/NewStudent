@@ -68,39 +68,56 @@ void Roster::parse(string studentData) //pulls from main studentdata array
 	 
 
 	add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degreeProgram);
-	counter = counter + 1;
+	
 
 }
 
 void Roster::add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) //add degree
 {
-	int* daysInCourse = new int[5] {daysInCourse1, daysIncourse2, daysInCourse3};
+	int* daysInCourse = new int[3] {daysInCourse1, daysInCourse2, daysInCourse3};
 	classRosterArray.push_back(new Student(studentId, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram));
 	
 }
 
 void Roster::remove(string studentId)
 {
-
+	for (i = 0; i < classRosterArray.size(); ++i) {
+		//if (find(classRosterArray.begin(), classRosterArray.end(), studentId) != ) {
+			//classRosterArray.erase(classRosterArray.begin() + i); //right solution just cant get code to compare string data
+		//}
+		//else {
+			//cout << "Student with id " << studentId << " not found!" << endl;
+		//}
+	}
+	
 }
 
 void Roster::printAll()
 {
 	for (int i = 0; i < classRosterArray.size(); ++i) {
-		classRosterArray.at(i)->Print();
-		//change to relevent data
+		classRosterArray[i]->Print();
+		
 	}
 }
 
-void Roster::printAverageDaysInCourse(string studentId)// need changed thoguht i was working on print all
+void Roster::printAverageDaysInCourse(string studentId)
 {
 	
 }
 
 void Roster::printInvaildEmails()
 {
+	Student s;
+	//string eAddress = s.GetEmailAddress();
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		//emailAddress.find() // not sure how to use find toget email string
+
+		
+	}
 }
 
-void Roster::printBydegreeProgram(DegreeProgram degreProgram)
+void Roster::printBydegreeProgram(DegreeProgram dgreeProgram)
 {
+
+	
 }

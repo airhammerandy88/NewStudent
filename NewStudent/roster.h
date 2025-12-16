@@ -2,12 +2,12 @@
 #include "Student.h"
 #include <string>
 #include <vector>
+//#include <algorithm>
 
 class Roster {
 private:
-	
+	Student s;
 	vector<Student*> classRosterArray;
-	//vector<int*> daysInCourse;
 	int counter = 0;
 	int i = 0;
 

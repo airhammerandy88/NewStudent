@@ -32,9 +32,10 @@ int main() {
 
 	roster.printBydegreeProgram(SOFTWARE);
 	roster.remove("A3");
-	roster.printAll();
+	roster.printAll(); 
 	roster.remove("A3");
 	// expected the above line should print a message saying such a student with this id isnt found
+	
 
 	
 	

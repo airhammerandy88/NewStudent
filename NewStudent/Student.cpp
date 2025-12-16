@@ -12,8 +12,15 @@ Student::Student()
 {
 }
 
-Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse, DegreeProgram degreeProgram)// need completed
+Student::Student(string sId, string fName, string lName, string eAddress, int s_age, int daysInCourse[3], DegreeProgram dProgram)// need completed
 {
+    this->studentId = sId;
+    this->firstName = fName;
+    this->lastName = lName;
+    this->emailAddress = eAddress;
+    this->age = s_age;
+    this->numDaysToCompleteCourse[3] = daysInCourse[3];
+    this->degreeProgram = dProgram;
 }
 
 string Student::GetStudentId() const
@@ -39,6 +46,11 @@ string Student::GetEmailAddress() const
 int Student::GetAge() const
 {
     return age;
+}
+
+int Student::GetNumDaysToCompleteCourse() 
+{
+    return numDaysToCompleteCourse[3];
 }
 
 DegreeProgram Student::GetDegreeProgram()
@@ -72,13 +84,14 @@ void Student::SetAge(int aGe)
     age = aGe;
 }
 
-void Student::Print() const 
+void Student::Print() const
 {
-    cout << "Student Id:   " << studentId << "   ";
-    cout << "First Name:   " << firstName << "    "; 
-    cout << "Last name:   " << lastName << "   ";
-    cout << "Email:   " << emailAddress << "   ";
-    cout << "Age:   " << age << "    ";
-    cout << "daysInCourse:   " << GetNumDaysToCompleteCourse << "   ";
-    cout << "Degree Program:    " << degreeProgram << endl;
+    
+    cout << studentId << "   ";
+    cout << "First Name: " << firstName << "     "; 
+    cout << "Last name: " << lastName << "   ";
+    cout << "Email: " << emailAddress << "   ";
+    cout << "Age: " << age << " ";
+    cout << "Days in Course: {";
+    cout << "Degree Program: " << degreeProgram << endl;
 }

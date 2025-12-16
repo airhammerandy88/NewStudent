@@ -14,7 +14,10 @@ private:
 	string lastName;
 	string emailAddress;
 	int age = 0;
-	int numDaysToCompleteCourse[5] = { 0, 0, 0, 0, 0 };
+	//int dayInCourse1;
+	//int dayInCourse2;
+	//int dayInCourse3;
+	int numDaysToCompleteCourse[5];
 	DegreeProgram degreeProgram = NETWORK;
 
 	
@@ -23,14 +26,14 @@ private:
 public:
 	
 	Student();
-	Student(string studentId, string firstName, string lastName, string emailAddress, int age, int dayInCourse, DegreeProgram degreeProgram);
+	Student(string sId, string fName, string lName, string eAddress, int s_age, int daysInCourse[3], DegreeProgram dProgram);//string studentId, string firstName, string lastName, string emailAddress, int age, int dayInCourse[], DegreeProgram degreeProgram);
 
 	string GetStudentId() const;
 	string GetFirstName() const;
 	string GetLastName() const;
 	string GetEmailAddress() const;
 	int GetAge() const;
-	int GetNumDaysToCompleteCourse[5]; //need research
+	int GetNumDaysToCompleteCourse();
 	DegreeProgram GetDegreeProgram() ; 
 
 	void SetStudentID(string studentId);
@@ -39,7 +42,7 @@ public:
 	void SetEmailAddres(string emailAddress);
 	void SetAge(int age);
 	
-	//void SetNumDaysToCompleteCourse[5](int numDays);
+	//void SetNumDaysToCompleteCourse[5]();
 	
 
 
