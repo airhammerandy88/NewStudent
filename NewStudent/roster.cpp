@@ -81,15 +81,20 @@ void Roster::add(string studentId, string firstName, string lastName, string ema
 
 void Roster::remove(string studentId)
 {
+	bool unsummon = false;
+	cout << "Removing " << studentId << "\n";
 	for (i = 0; i < classRosterArray.size(); ++i) {
-		//if (find(classRosterArray.begin(), classRosterArray.end(), studentId) != ) {
-			//classRosterArray.erase(classRosterArray.begin() + i); //right solution just cant get code to compare string data
-		//}
-		//else {
-			//cout << "Student with id " << studentId << " not found!" << endl;
-		//}
+		
+		
+		if (classRosterArray[i]->Student::GetStudentId() == studentId) {
+			classRosterArray.erase(classRosterArray.begin() + i);
+			unsummon = true;
+			
+		}
 	}
-	
+	if (unsummon == false) {
+		cout << "Student with id " << studentId << " not found." << "\n";
+	}
 }
 
 void Roster::printAll()
