@@ -107,7 +107,7 @@ void Roster::printAll()
 
 void Roster::printAverageDaysInCourse(string studentId)
 {
-	
+	//use switches amd breaks
 }
 
 void Roster::printInvaildEmails()
