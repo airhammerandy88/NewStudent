@@ -8,7 +8,7 @@ int main() {
 								   "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
 								   "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
 								   "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-									"A5,Andy,Jones,ajone355@wgu.edu,37,30, 35, 40, SOFTWARE" };
+									"A5,Andy,Jones,ajone355@wgu.edu,37,30,35,40,SOFTWARE" };
 
 	Roster roster; //need to change to something relevent
 	Student Nstudent;
@@ -16,7 +16,7 @@ int main() {
 	cout << "C867: Scripting and Programming, C++" << endl;
 	cout << "Andrew Jones" << endl;
 	cout << "Student ID: 012527555" << endl;
-
+	cout << endl;
 	for (int i = 0; i < 5; ++i) {
 		roster.parse(studentData[i]);
 
@@ -28,7 +28,7 @@ int main() {
 	roster.printInvaildEmails();
 
 	//loop through rosterarray and for each elememt
-	roster.printAverageDaysInCourse("A3");//need to build, loop
+	roster.printAverageDaysInCourse(Nstudent.GetStudentId());//need to build, loop
 
 	roster.printBydegreeProgram(SOFTWARE);
 	roster.remove("A3");

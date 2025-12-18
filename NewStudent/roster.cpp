@@ -93,7 +93,7 @@ void Roster::remove(string studentId)
 		}
 	}
 	if (unsummon == false) {
-		cout << "Student with id " << studentId << " not found." << "\n";
+		cout << "Student with id " << studentId << " not found!" << "\n";
 	}
 }
 
@@ -103,32 +103,44 @@ void Roster::printAll()
 		classRosterArray[i]->Print();
 		
 	}
+
 }
 
 void Roster::printAverageDaysInCourse(string studentId)
 {
+	cout << "Average Days in Course" << endl;
 	for (int i = 0; i < classRosterArray.size(); ++i) {
-		if (classRosterArray[i]->Student::GetStudentId() == studentId) {
-			int daysInCourse = classRosterArray[i]->Student::GetNumDaysToCompleteCourse();
-			int avgDaysInCourse = daysInCourse;
-
-		}
-	}
-}
-
-void Roster::printInvaildEmails()
-{
-	Student s;
-	//string eAddress = s.GetEmailAddress();
-	for (int i = 0; i < classRosterArray.size(); ++i) {
-		//emailAddress.find() // not sure how to use find toget email string
+		cout << classRosterArray[i]->Student::GetStudentId() << ": " << classRosterArray[i]->Student::GetNumDaysToCompleteCourse() << endl;
+		//need to figure out how to get non pointer and real data, i have a sinking feeling numDaysTocompleteCourse isnt linked to daysInCourse
+			
+		
 
 		
 	}
 }
 
+void Roster::printInvaildEmails()
+{
+	
+	
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		string emailadd = classRosterArray[i]->Student::GetEmailAddress();
+
+		if ( emailadd.find(' ') != string::npos || emailadd.find('@') == string::npos || emailadd.find('.') == string::npos) {
+			cout << "Invalid email:\t" << emailadd << endl;
+		}
+		
+	}
+	cout << endl;
+}
+
 void Roster::printBydegreeProgram(DegreeProgram dgreeProgram)
 {
-
+	std::cout << "Degree Program" << endl;
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		if (classRosterArray[i]->Student::GetDegreeProgram() == 2) {
+			classRosterArray[i]->Print();
+		}
+	}
 	
 }
