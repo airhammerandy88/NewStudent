@@ -14,9 +14,7 @@ private:
 	string lastName;
 	string emailAddress;
 	int age = 0;
-	//int dayInCourse1;
-	//int dayInCourse2;
-	//int dayInCourse3;
+	
 	int numDaysToCompleteCourse[5];
 	DegreeProgram degreeProgram = NETWORK;
 

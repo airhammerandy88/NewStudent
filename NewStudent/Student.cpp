@@ -51,7 +51,7 @@ int Student::GetAge() const
 
 int Student::GetNumDaysToCompleteCourse() 
 {
-    return numDaysToCompleteCourse[3];
+    return numDaysToCompleteCourse[5];
 }
 
 DegreeProgram Student::GetDegreeProgram()
@@ -88,11 +88,11 @@ void Student::SetAge(int aGe)
 void Student::Print() const
 {
     
-    cout << studentId;
-    cout << "          " << " First Name: " << firstName;
-    cout << " Last name: " << lastName;
-    cout << "          " << " Email: " << emailAddress;
-    cout << "          " << " Age: " << age;
-    cout << "          " << " Days in Course: " << " {need to calculate} ";
-    cout << "          " << " Degree Program: " << degreeProgram << endl;
+    cout << left << setw(2) << studentId;
+    cout << " \t " << left << setw(11) << "First Name: " << setw(5) << firstName;
+    cout << " \t " << left << setw(10) << "Last Name: " << setw(8) << lastName;
+    cout << " \t " << left << setw(6) << "Email: " << setw(22) << emailAddress;
+    cout << " \t " << left << setw(3) << "Age: " << setw(2) << age;
+    cout << " \t " << left << setw(15) << "Days in Course: " << setw(12) << numDaysToCompleteCourse; // conflicting data for Days in course 
+    cout << " \t " << left << setw(15) << "Degree Program: " << setw(8) << degreeProgram << endl;
 }

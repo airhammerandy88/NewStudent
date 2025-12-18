@@ -107,7 +107,13 @@ void Roster::printAll()
 
 void Roster::printAverageDaysInCourse(string studentId)
 {
-	//use switches amd breaks
+	for (int i = 0; i < classRosterArray.size(); ++i) {
+		if (classRosterArray[i]->Student::GetStudentId() == studentId) {
+			int daysInCourse = classRosterArray[i]->Student::GetNumDaysToCompleteCourse();
+			int avgDaysInCourse = daysInCourse;
+
+		}
+	}
 }
 
 void Roster::printInvaildEmails()
